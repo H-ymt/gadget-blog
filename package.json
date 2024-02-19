@@ -1,0 +1,30 @@
+{
+  "name": "astro-sass-starter-pack",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prettier": "prettier --write 'src/**/*.{ts,js,astro,scss}'",
+    "eslint": "eslint --fix 'src/**/*.{ts,js,astro}'",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "astro": "^3.2.1",
+    "ress": "^5.0.2",
+    "sass": "^1.68.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "eslint-plugin-astro": "^0.29.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "postcss-html": "^1.5.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
+  }
+}
