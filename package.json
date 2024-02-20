@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "astro": "^3.2.1",
-    "ress": "^5.0.2",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^6.7.3",
@@ -23,6 +23,7 @@
     "eslint-plugin-astro": "^0.29.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
+    "modern-css-reset": "^1.4.0",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0"

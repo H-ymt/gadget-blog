@@ -1,17 +1,50 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
 import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <h1 class="title">Astro×Sass Starter Pack</h1>
-    <Card href="/" title="Title" body="body" />
-  </main>
+  <Container>
+    <Card>
+      <div class="profile">
+        <h1 class="profile__title">Blog of gadgets I use</h1>
+        <p class="profile__description">
+          Hi, my name is Yamato, <br />I'm the Markup Corder.
+        </p>
+
+        <div class="profile__link">
+          <a href="/">❤️</a>
+          <a href="/">⭐️</a>
+        </div>
+      </div>
+    </Card>
+  </Container>
 </Layout>
 
 <style lang="scss">
-  .title {
-    font-weight: 500;
+  .profile {
+    text-align: center;
+  }
+
+  .profile__title {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .profile__description {
+    padding-top: 15px;
+    padding-bottom: 32px;
+    color: var(--color-background);
+  }
+
+  .profile__link {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .profile__link a {
+    text-decoration: none;
   }
 </style>

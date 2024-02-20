@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import Menu from "./Menu.astro";
+---
+
+<header class="header">
+  <div class="header__inner">
+    <Image src="/favicon.svg" width="32" height="32" alt="logo" />
+    <Menu />
+  </div>
+</header>
+
+<style lang="scss">
+  .header {
+    padding-inline: 20px;
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1171px;
+    margin-inline: auto;
+    height: 70px;
+  }
+</style>

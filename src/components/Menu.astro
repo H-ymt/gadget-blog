@@ -1,0 +1,42 @@
+---
+const isActive = Astro.url.pathname;
+---
+
+<nav>
+  <ul class="list">
+    <a href="/" class={`list__link ${isActive === "/" ? "isActive" : ""}`}>
+      <li>Home</li>
+    </a>
+    <a
+      href="/about/"
+      class={`list__link ${isActive === "/about" ? "isActive" : ""}`}
+    >
+      <li>About</li>
+    </a>
+  </ul>
+</nav>
+
+<style lang="scss">
+  .list {
+    display: flex;
+    gap: 12px;
+    list-style-type: none;
+  }
+
+  .list__link {
+    padding: 6px 24px;
+    border-radius: var(--radius);
+    text-decoration: none;
+  }
+
+  @media (hover: hover) {
+    .list__link:hover {
+      background: var(--color-secondary-background);
+    }
+  }
+
+  .list__link.isActive {
+    color: var(--color-primary-foreground);
+    background: var(--color-primary-background);
+  }
+</style>
