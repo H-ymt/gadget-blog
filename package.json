@@ -13,7 +13,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "astro": "^3.2.1",
+    "astro": "^4.4.0",
+    "newt-client-js": "^3.3.0",
     "sass": "^1.68.0",
     "sharp": "^0.33.2"
   },

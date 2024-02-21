@@ -1,7 +1,17 @@
 ---
-import Container from "../components/Container.astro";
-import Card from "../components/Card.astro";
-import Layout from "../layouts/Layout.astro";
+import Container from '../components/Container.astro'
+import Card from '../components/Card.astro'
+import Layout from '../layouts/Layout.astro'
+import { newtClient } from '../lib/newt'
+import type { Article } from '../lib/newt'
+
+const { items: articles } = await newtClient.getContents<Article>({
+  appUid: 'blog',
+  modelUid: 'article',
+  query: {
+    select: ['title', 'slug', 'body']
+  }
+})
 ---
 
 <Layout title="Welcome to Astro.">
@@ -19,6 +29,20 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </Card>
+
+    <section class="blog">
+      <ul class="blogList">
+        {
+          articles.map((article) => {
+            return (
+              <li>
+                <a href={`/articles/${article.slug}`}>{article.title}</a>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </section>
   </Container>
 </Layout>
 
@@ -46,5 +70,9 @@ import Layout from "../layouts/Layout.astro";
 
   .profile__link a {
     text-decoration: none;
+  }
+
+  .blog {
+    padding-top: 32px;
   }
 </style>

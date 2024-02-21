@@ -1,16 +1,13 @@
 ---
-const isActive = Astro.url.pathname;
+const isActive = Astro.url.pathname
 ---
 
 <nav>
   <ul class="list">
-    <a href="/" class={`list__link ${isActive === "/" ? "isActive" : ""}`}>
+    <a href="/" class={`list__link ${isActive === '/' ? 'isActive' : ''}`}>
       <li>Home</li>
     </a>
-    <a
-      href="/about/"
-      class={`list__link ${isActive === "/about" ? "isActive" : ""}`}
-    >
+    <a href="/about/" class={`list__link ${isActive === '/about' ? 'isActive' : ''}`}>
       <li>About</li>
     </a>
   </ul>
