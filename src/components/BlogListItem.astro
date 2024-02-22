@@ -1,0 +1,29 @@
+---
+import { newtClient } from '../lib/newt'
+import type { Article } from '../lib/newt'
+
+const { items: articles } = await newtClient.getContents<Article>({
+  appUid: 'blog',
+  modelUid: 'article',
+  query: {
+    select: ['title', 'slug', 'body']
+  }
+})
+---
+
+{
+  articles.map((article) => {
+    return (
+      <li class="blogList__item">
+        {' '}
+        <a href={`/articles/${article.slug}`}>{article.title}</a>{' '}
+      </li>
+    )
+  })
+}
+
+<style lang="scss">
+  .blogList__item {
+    list-style-type: none;
+  }
+</style>

@@ -2,16 +2,7 @@
 import Container from '../components/Container.astro'
 import Card from '../components/Card.astro'
 import Layout from '../layouts/Layout.astro'
-import { newtClient } from '../lib/newt'
-import type { Article } from '../lib/newt'
-
-const { items: articles } = await newtClient.getContents<Article>({
-  appUid: 'blog',
-  modelUid: 'article',
-  query: {
-    select: ['title', 'slug', 'body']
-  }
-})
+import BlogList from '../components/BlogList.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -31,21 +22,10 @@ const { items: articles } = await newtClient.getContents<Article>({
     </Card>
 
     <section class="blog">
-      <ul class="blogList">
-        {
-          articles.map((article) => {
-            return (
-              <li>
-                <a href={`/articles/${article.slug}`}>{article.title}</a>
-              </li>
-            )
-          })
-        }
-      </ul>
+      <BlogList />
     </section>
   </Container>
 </Layout>
-
 <style lang="scss">
   .profile {
     text-align: center;
