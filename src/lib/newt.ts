@@ -1,9 +1,11 @@
-import { createClient } from 'newt-client-js'
+import { createClient, type Media } from 'newt-client-js'
 
 export interface Article {
   title: string
   slug: string
   body: string
+  coverImage: Media
+  tags?: []
 }
 
 export const newtClient = createClient({

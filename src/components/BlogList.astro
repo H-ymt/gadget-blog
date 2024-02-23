@@ -1,15 +1,5 @@
 ---
-import { newtClient } from '../lib/newt'
-import type { Article } from '../lib/newt'
 import BlogListItem from './BlogListItem.astro'
-
-const { items: articles } = await newtClient.getContents<Article>({
-  appUid: 'blog',
-  modelUid: 'article',
-  query: {
-    select: ['title', 'slug', 'body']
-  }
-})
 ---
 
 <ul class="blogList">
