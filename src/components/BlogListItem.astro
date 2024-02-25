@@ -21,10 +21,10 @@ const { items: articles } = await newtClient.getContents<Article>({
             src={article.coverImage.src}
             alt="Blog thumbnail"
             width={300}
-            height={300}
+            height={220}
             class="blogList__image"
           />
-          <p>{article.title}</p>
+          <p class="blogList__title">{article.title}</p>
         </a>
       </li>
     )
@@ -33,13 +33,20 @@ const { items: articles } = await newtClient.getContents<Article>({
 
 <style lang="scss">
   .blogList__item {
+    max-width: 300px;
     list-style-type: none;
+  }
+
+  .blogList__item a {
+    text-decoration: none;
   }
 
   .blogList__image {
     object-fit: cover;
-    aspect-ratio: 1/1;
-    max-width: 300px;
-    border-radius: var(--radius);
+    border-radius: var(--radius-sm);
+  }
+
+  .blogList__title {
+    padding-top: 8px;
   }
 </style>
