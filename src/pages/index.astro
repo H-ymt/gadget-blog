@@ -1,5 +1,4 @@
 ---
-import Container from '../components/Container.astro'
 import Card from '../components/Card.astro'
 import Layout from '../layouts/Layout.astro'
 import BlogList from '../components/BlogList.astro'
@@ -8,28 +7,26 @@ import { Image } from 'astro:assets'
 ---
 
 <Layout title="Welcome to Astro.">
-  <Container>
-    <Card>
-      <div class="profile">
-        <div>
-          <Image src={Icon} alt="icon" width="86" height="86" class="profile__icon" />
-        </div>
-        <h1 class="profile__title">Blog of gadgets I use</h1>
-        <p class="profile__description">
-          Hi, my name is Yamato, <br />I'm the Markup Coder.
-        </p>
-
-        <div class="profile__link">
-          <a href="/">❤️</a>
-          <a href="/">⭐️</a>
-        </div>
+  <Card>
+    <div class="profile">
+      <div>
+        <Image src={Icon} alt="icon" width="86" height="86" class="profile__icon" />
       </div>
-    </Card>
+      <h1 class="profile__title">Blog of gadgets I use</h1>
+      <p class="profile__description">
+        Hi, my name is Yamato, <br />I'm the Markup Coder.
+      </p>
 
-    <section class="blog">
-      <BlogList />
-    </section>
-  </Container>
+      <div class="profile__link">
+        <a href="/">❤️</a>
+        <a href="/">⭐️</a>
+      </div>
+    </div>
+  </Card>
+
+  <section class="blog">
+    <BlogList />
+  </section>
 </Layout>
 <style lang="scss">
   .profile {
