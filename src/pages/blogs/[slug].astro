@@ -1,7 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import { SITE_TITLE } from '../../constants'
 import { newtClient } from '../../lib/newt'
 import type { Article } from '../../lib/newt'
+import '../../styles/blog.scss'
 
 export const getStaticPaths = async () => {
   const { items: articles } = await newtClient.getContents<Article>({
@@ -20,9 +22,9 @@ export const getStaticPaths = async () => {
 const { article } = Astro.props
 ---
 
-<Layout title={article.title}>
-  <main>
-    <h2>{article.title}</h2>
-    <article set:html={article.body} />
-  </main>
+<Layout title={`${article.title} - ${SITE_TITLE}`}>
+  <h2>{article.title}</h2>
+  <article set:html={article.body} />
 </Layout>
+
+<style lang="scss"></style>
