@@ -17,7 +17,29 @@ import Menu from './Menu.astro'
 
 <style lang="scss">
   .header {
+    position: sticky;
+    top: 0;
     padding-inline: 20px;
+    animation: scroll-backgroundColor linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-backgroundColor {
+    0% {
+      background: transparent;
+    }
+
+    1% {
+      background: #ffffff9e;
+      backdrop-filter: blur(2px);
+      box-shadow: 0 0 2px 0 #d4d1d19e;
+    }
+
+    100% {
+      background: #ffffff9e;
+      backdrop-filter: blur(2px);
+      box-shadow: 0 0 2px 0 #d4d1d19e;
+    }
   }
 
   .header__inner {
