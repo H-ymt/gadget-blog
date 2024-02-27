@@ -3,15 +3,20 @@ import Container from '../components/Container.astro'
 import Card from '../components/Card.astro'
 import Layout from '../layouts/Layout.astro'
 import BlogList from '../components/BlogList.astro'
+import Icon from '../assets/image/icon.jpg'
+import { Image } from 'astro:assets'
 ---
 
 <Layout title="Welcome to Astro.">
   <Container>
     <Card>
       <div class="profile">
+        <div>
+          <Image src={Icon} alt="icon" width="86" height="86" class="profile__icon" />
+        </div>
         <h1 class="profile__title">Blog of gadgets I use</h1>
         <p class="profile__description">
-          Hi, my name is Yamato, <br />I'm the Markup Corder.
+          Hi, my name is Yamato, <br />I'm the Markup Coder.
         </p>
 
         <div class="profile__link">
@@ -28,7 +33,15 @@ import BlogList from '../components/BlogList.astro'
 </Layout>
 <style lang="scss">
   .profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
     text-align: center;
+  }
+
+  .profile__icon {
+    border-radius: 50%;
   }
 
   .profile__title {
@@ -37,8 +50,6 @@ import BlogList from '../components/BlogList.astro'
   }
 
   .profile__description {
-    padding-top: 15px;
-    padding-bottom: 32px;
     color: var(--color-background);
   }
 

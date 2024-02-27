@@ -20,9 +20,10 @@ const { items: articles } = await newtClient.getContents<Article>({
           <Image
             src={article.coverImage.src}
             alt="Blog thumbnail"
-            width={774}
-            height={546}
+            width={400}
+            height={300}
             class="blogList__image"
+            format="webp"
           />
           <p class="blogList__title">{article.title}</p>
         </a>
@@ -42,11 +43,17 @@ const { items: articles } = await newtClient.getContents<Article>({
 
   .blogList__image {
     object-fit: cover;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius);
+
+    @include mq(md) {
+      height: unset;
+    }
   }
 
   .blogList__title {
     padding-top: 8px;
-    font-size: 15px;
+    padding-left: 4px;
+    font-weight: 500;
+    font-size: 16px;
   }
 </style>
