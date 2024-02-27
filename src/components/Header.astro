@@ -5,8 +5,13 @@ import Menu from './Menu.astro'
 
 <header class="header">
   <div class="header__inner">
-    <Image src="/favicon.svg" width="32" height="32" alt="logo" />
-    <Menu />
+    <div class="headerMenu">
+      <Image src="/favicon.svg" width="32" height="32" alt="logo" />
+      <Menu />
+    </div>
+    <div class="headerSearch">
+      <span>🔍</span>
+    </div>
   </div>
 </header>
 
@@ -19,8 +24,16 @@ import Menu from './Menu.astro'
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1171px;
+    max-width: 800px;
     margin-inline: auto;
     height: 70px;
+  }
+
+  .headerMenu {
+    display: flex;
+    gap: 12px;
+  }
+
+  .headerSearch {
   }
 </style>

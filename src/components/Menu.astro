@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components'
 const isActive = Astro.url.pathname
 ---
 
@@ -10,30 +11,53 @@ const isActive = Astro.url.pathname
     <a href="/about/" class={`list__link ${isActive === '/about' ? 'isActive' : ''}`}>
       <li>About</li>
     </a>
+    <a
+      href="https://github.com/H-ymt/gadget-blog"
+      class={`list__link list__githubLink`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="mdi:github" size={18} aria-hidden="true" class="list__githubIcon" />
+      <label>Source</label>
+    </a>
   </ul>
 </nav>
 
 <style lang="scss">
   .list {
     display: flex;
-    gap: 12px;
+    align-items: center;
     list-style-type: none;
   }
 
+  .list__githubLink {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
   .list__link {
-    padding: 6px 24px;
-    border-radius: var(--radius);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
     text-decoration: none;
+    transition: color 0.2s ease;
   }
 
   @media (hover: hover) {
     .list__link:hover {
-      background: var(--color-secondary-background);
+      color: var(--color-primary-background);
+      transition: color 0.2s ease;
+    }
+  }
+
+  @media (hover: hover) {
+    .list__githubLink:hover .list__githubIcon {
+      fill: var(--color-primary-background);
     }
   }
 
   .list__link.isActive {
-    color: var(--color-primary-foreground);
-    background: var(--color-primary-background);
+    font-weight: 500;
+    color: var(--color-primary-background);
   }
 </style>
