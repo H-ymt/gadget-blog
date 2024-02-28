@@ -5,14 +5,16 @@ h2 {
 }
 
 article > p {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 article img {
   width: 100%;
+  max-width: 400px;
   height: auto;
+  margin-bottom: 28px;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   object-fit: cover;
-  filter: brightness(0.85);
+  filter: brightness(0.7);
 }
