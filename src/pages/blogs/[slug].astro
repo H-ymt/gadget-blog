@@ -4,13 +4,14 @@ import { SITE_TITLE } from '../../constants'
 import { newtClient } from '../../lib/newt'
 import type { Article } from '../../lib/newt'
 import '../../styles/blog.scss'
+import { Image } from 'astro:assets'
 
 export const getStaticPaths = async () => {
   const { items: articles } = await newtClient.getContents<Article>({
     appUid: 'blog',
     modelUid: 'article',
     query: {
-      select: ['title', 'slug', 'body']
+      select: ['title', 'slug', 'body', 'coverImage']
     }
   })
   return articles.map((article) => ({
@@ -23,6 +24,14 @@ const { article } = Astro.props
 ---
 
 <Layout title={`${article.title} - ${SITE_TITLE}`}>
+  <Image
+    src={article.coverImage.src}
+    width={800}
+    height={800}
+    alt="cover image"
+    class="coverImage"
+    loading="eager"
+  />
   <h2>{article.title}</h2>
   <article set:html={article.body} />
 </Layout>

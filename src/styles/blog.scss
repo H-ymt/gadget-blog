@@ -1,3 +1,13 @@
+.coverImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+  object-fit: cover;
+  aspect-ratio: 4 / 2.5;
+  border-radius: var(--radius);
+  filter: brightness(0.7);
+}
+
 h2 {
   margin-bottom: 16px;
   padding-bottom: 6px;
@@ -13,7 +23,6 @@ article img {
   max-width: 400px;
   height: auto;
   margin-bottom: 28px;
-  aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   object-fit: cover;
   filter: brightness(0.7);
