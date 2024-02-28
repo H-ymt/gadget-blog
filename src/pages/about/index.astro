@@ -1,0 +1,37 @@
+---
+import { Icon } from 'astro-icon/components'
+import { SITE_TITLE } from '../../constants'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title={`${SITE_TITLE} - About`}>
+  <h1>About</h1>
+  <p class="description">
+    I've been working from home ever since I started coding as a job.<br />Always loved
+    gadgets like PCs and keyboards, but I've started buying more to increase my
+    productivity at work. Half of it is for fun and the other half is for work.
+    <a href="https://h-ymt.com" class="homepageLink"
+      >More about me <span class="homepageLink__icon" aria-hidden="true"
+        ><Icon name="mdi:arrow-right" size={18} /></span
+      ></a
+    >
+  </p>
+</Layout>
+
+<style lang="scss">
+  .description {
+  }
+
+  .homepageLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    color: var(--color-primary-background);
+  }
+
+  .homepageLink__icon {
+    display: inline-flex;
+    align-items: center;
+  }
+</style>

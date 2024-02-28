@@ -20,12 +20,12 @@ const { items: articles } = await newtClient.getContents<Article>({
           <Image
             src={article.coverImage.src}
             alt="Blog thumbnail"
-            width={400}
-            height={300}
+            width={338}
+            height={253}
             class="blogList__image"
-            format="webp"
           />
-          <p class="blogList__title">{article.title}</p>
+          <h3 class="blogList__title">{article.title}</h3>
+          <span>{article.tags}</span>
         </a>
       </li>
     )
@@ -45,10 +45,8 @@ const { items: articles } = await newtClient.getContents<Article>({
     object-fit: cover;
     box-shadow: 0px 0px 16px -7px var(--color-shadow);
     border-radius: var(--radius);
-    width: 100%;
-    max-width: 400px;
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 2.5;
     filter: brightness(0.8);
   }
 
@@ -56,6 +54,6 @@ const { items: articles } = await newtClient.getContents<Article>({
     padding-top: 8px;
     padding-left: 4px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
   }
 </style>
