@@ -1,11 +1,16 @@
-import { createClient, type Media, type Content } from 'newt-client-js'
+import { createClient, type Media } from 'newt-client-js'
+
+export interface Tag {
+  slug: string
+  name: string
+}
 
 export interface Article {
   title: string
   slug: string
   body: string
   coverImage: Media
-  tags?: Content
+  tags?: Tag[]
 }
 
 export const newtClient = createClient({

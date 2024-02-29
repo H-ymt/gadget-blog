@@ -25,7 +25,12 @@ const { items: articles } = await newtClient.getContents<Article>({
             class="blogList__image"
           />
           <h3 class="blogList__title">{article.title}</h3>
-          <span>{article.tags}</span>
+          <span>
+            {' '}
+            {article.tags?.map((tag) => (
+              <span>{tag.name}</span>
+            ))}
+          </span>
         </a>
       </li>
     )
