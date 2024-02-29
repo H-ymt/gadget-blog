@@ -5,7 +5,7 @@
   object-fit: cover;
   aspect-ratio: 4 / 2.5;
   border-radius: var(--radius);
-  filter: brightness(0.7);
+  filter: brightness(1.15);
 }
 
 h2 {
@@ -25,5 +25,5 @@ article img {
   margin-bottom: 28px;
   border-radius: var(--radius);
   object-fit: cover;
-  filter: brightness(0.7);
+  filter: brightness(1.15);
 }
