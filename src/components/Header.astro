@@ -1,16 +1,19 @@
 ---
 import { Image } from 'astro:assets'
 import Menu from './Menu.astro'
+import Search from '../components/Search.astro'
 ---
 
 <header class="header">
   <div class="header__inner">
     <div class="headerMenu">
-      <Image src="/favicon.svg" width="32" height="32" alt="logo" />
+      <a href="/" class="headerLogo">
+        <Image src="/logo.png" width="32" height="32" alt="logo" />
+      </a>
       <Menu />
     </div>
     <div class="headerSearch">
-      <span>🔍</span>
+      <Search />
     </div>
   </div>
 </header>
@@ -54,9 +57,17 @@ import Menu from './Menu.astro'
 
   .headerMenu {
     display: flex;
+    align-items: center;
     gap: 12px;
   }
 
-  .headerSearch {
+  .headerLogo {
+    display: inline-flex;
+    align-items: center;
+    height: 50%;
+  }
+
+  .headerLogo img {
+    border-radius: 50%;
   }
 </style>

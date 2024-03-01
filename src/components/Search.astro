@@ -1,0 +1,40 @@
+<div id="search" class="search"></div>
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({
+      element: '#search',
+      showSubResults: true,
+      translations: {
+        placeholder: 'search',
+        clear_search: 'delete',
+        load_more: 'load more',
+        search_label: 'search this site',
+        placeholder: 'Type "/" to search blog',
+        searching: 'Searching...'
+      }
+    })
+  })
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === '/') {
+      event.preventDefault() // デフォルトの"/"キーの動作を停止
+      document.querySelector('.pagefind-ui__search-input').focus() // 検索バーにフォーカスを当てる
+    }
+  })
+</script>
+
+<style lang="scss">
+  :root {
+    --pagefind-ui-scale: 0.8;
+    --pagefind-ui-primary: #393939;
+    --pagefind-ui-text: #393939;
+    --pagefind-ui-background: #ffffff;
+    --pagefind-ui-border: #eeeeee;
+    --pagefind-ui-tag: #eeeeee;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: var(--radius-sm);
+    --pagefind-ui-image-border-radius: var(--radius-sm);
+    --pagefind-ui-image-box-ratio: 3 / 2;
+    --pagefind-ui-font: var(--font-family);
+  }
+</style>

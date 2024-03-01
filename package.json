@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist && cp -r dist/pagefind public/",
     "preview": "astro preview",
     "astro": "astro",
     "prettier": "prettier --write 'src/**/*.{ts,js,astro,scss}'",
@@ -13,8 +13,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.6",
+    "@pagefind/default-ui": "^1.0.4",
     "astro": "^4.4.0",
     "newt-client-js": "^3.3.0",
+    "pagefind": "^1.0.4",
     "sass": "^1.68.0",
     "sharp": "^0.33.2"
   },

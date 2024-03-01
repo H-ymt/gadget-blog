@@ -31,6 +31,7 @@ const { article } = Astro.props
     alt="cover image"
     class="coverImage"
     loading="eager"
+    data-pagefind-meta="image[src],image_alt[alt]"
   />
   <h2>{article.title}</h2>
   <article set:html={article.body} />
