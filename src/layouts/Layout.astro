@@ -3,6 +3,7 @@ import 'modern-css-reset'
 import '../styles/global.scss'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import Circle from '../components/Circle.astro'
 
 interface Props {
   title: string
@@ -27,6 +28,7 @@ const { title } = Astro.props
     <Header />
     <main class="main">
       <slot />
+      <Circle />
     </main>
     <Footer />
   </body>
