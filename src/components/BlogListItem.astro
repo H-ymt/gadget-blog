@@ -35,44 +35,6 @@ const { items: articles } = await newtClient.getContents<Article>({
             </div>
           </a>
         </li>
-        <li class="blogList__item js-blogItem">
-          <a href={`/blogs/${article.slug}`}>
-            <Image
-              src={article.coverImage.src}
-              alt="Blog thumbnail"
-              width={338}
-              height={253}
-              class="blogList__image"
-              data-pagefind-meta="image[src],image_alt[alt]"
-              loading="eager"
-            />
-            <h3 class="blogList__title">{article.title}</h3>
-            <div>
-              {article.tags?.map((tag) => (
-                <span class="blogList__tag">{tag.name}</span>
-              ))}
-            </div>
-          </a>
-        </li>
-        <li class="blogList__item js-blogItem">
-          <a href={`/blogs/${article.slug}`}>
-            <Image
-              src={article.coverImage.src}
-              alt="Blog thumbnail"
-              width={338}
-              height={253}
-              class="blogList__image"
-              data-pagefind-meta="image[src],image_alt[alt]"
-              loading="eager"
-            />
-            <h3 class="blogList__title">{article.title}</h3>
-            <div>
-              {article.tags?.map((tag) => (
-                <span class="blogList__tag">{tag.name}</span>
-              ))}
-            </div>
-          </a>
-        </li>
       </>
     )
   })
