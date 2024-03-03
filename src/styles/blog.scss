@@ -11,11 +11,14 @@
 h2 {
   margin-bottom: 16px;
   padding-bottom: 6px;
+  font-weight: 400;
   border-bottom: 1px solid var(--color-foreground);
 }
 
 article > p {
   margin-bottom: 16px;
+  font-weight: 300;
+  color: var(--color-background);
 }
 
 article img {
