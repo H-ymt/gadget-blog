@@ -52,12 +52,12 @@ const { items: articles } = await newtClient.getContents<Article>({
 
   .blogList__image {
     width: 100%;
-    object-fit: cover;
-    box-shadow: 0px 0px 16px -7px var(--color-shadow);
-    border-radius: var(--radius);
     height: auto;
     aspect-ratio: 4 / 2.5;
+    object-fit: cover;
     filter: brightness(1.15);
+    border-radius: var(--radius);
+    box-shadow: 0 0 16px -7px var(--color-shadow);
 
     @include mq(sm) {
       width: unset;
@@ -67,19 +67,19 @@ const { items: articles } = await newtClient.getContents<Article>({
   .blogList__title {
     padding-top: 8px;
     padding-left: 4px;
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 400;
   }
 
   .blogList__tag {
     display: inline-block;
+    padding: 2px 8px;
     margin-top: 6px;
     margin-left: 4px;
-    padding: 2px 8px;
-    border-radius: calc(var(--radius-sm) / 2);
     font-size: 12px;
     color: var(--color-primary-foreground);
     background: var(--color-primary-background);
+    border-radius: calc(var(--radius-sm) / 2);
   }
 </style>
 

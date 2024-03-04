@@ -1,3 +1,4 @@
+/* stylelint-disable */
 @mixin mq($point) {
   @if $point == xxl {
     @media (width >= 1400px) {

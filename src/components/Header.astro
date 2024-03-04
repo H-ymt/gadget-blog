@@ -20,15 +20,15 @@ import Search from '../components/Search.astro'
 
 <style lang="scss">
   .header {
-    z-index: 1;
     position: sticky;
     top: 0;
+    z-index: 1;
     padding-inline: 20px;
-    animation: scroll-backgroundColor linear;
+    animation: scroll-background-color linear;
     animation-timeline: scroll();
   }
 
-  @keyframes scroll-backgroundColor {
+  @keyframes scroll-background-color {
     0% {
       background: transparent;
     }
@@ -51,14 +51,14 @@ import Search from '../components/Search.astro'
     align-items: center;
     justify-content: space-between;
     max-width: 700px;
-    margin-inline: auto;
     height: 70px;
+    margin-inline: auto;
   }
 
   .headerMenu {
     display: flex;
-    align-items: center;
     gap: 12px;
+    align-items: center;
   }
 
   .headerLogo {
