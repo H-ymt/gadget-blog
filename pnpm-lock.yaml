@@ -8,12 +8,9 @@ dependencies:
   '@astrojs/check':
     specifier: ^0.5.6
     version: 0.5.6(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3)
-  '@pagefind/default-ui':
-    specifier: ^1.0.4
-    version: 1.0.4
   astro:
     specifier: ^4.4.0
-    version: 4.4.9(sass@1.71.1)(typescript@5.3.3)
+    version: 4.4.11(sass@1.71.1)(typescript@5.3.3)
   gsap:
     specifier: ^3.12.5
     version: 3.12.5
@@ -1459,13 +1456,6 @@ packages:
     dev: false
     optional: true
 
-  /@pagefind/default-ui@1.0.4:
-    resolution:
-      {
-        integrity: sha512-edkcaPSKq67C49Vehjo+LQCpT615v4d7JRhfGzFPccePvdklaL+VXrfghN/uIfsdoG+HoLI1PcYy2iFcB9CTkw==
-      }
-    dev: false
-
   /@pagefind/linux-arm64@1.0.4:
     resolution:
       {
@@ -2221,10 +2211,10 @@ packages:
       - supports-color
     dev: true
 
-  /astro@4.4.9(sass@1.71.1)(typescript@5.3.3):
+  /astro@4.4.11(sass@1.71.1)(typescript@5.3.3):
     resolution:
       {
-        integrity: sha512-FTWhzKjao7rHHiF/CqPqPS18AFad+fmUcYUFhWWIsYETHcc9g0IIIiv6cHXUE7g6mEZf7ycAa+WdboeEHUhraQ==
+        integrity: sha512-mJ1k67xzAJO1vTTpATe76uSWhOgiEj3Id7narE6X2rMMOBjR8vJM+9Cmv/Wbpot6uMwFo780skUowlMptK96fQ==
       }
     engines: { node: '>=18.14.1', npm: '>=6.14.0' }
     hasBin: true
@@ -2269,7 +2259,7 @@ packages:
       http-cache-semantics: 4.1.1
       js-yaml: 4.1.0
       kleur: 4.1.5
-      magic-string: 0.30.7
+      magic-string: 0.30.8
       mdast-util-to-hast: 13.0.2
       mime: 3.0.0
       ora: 7.0.1
@@ -2288,8 +2278,8 @@ packages:
       tsconfck: 3.0.2(typescript@5.3.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.1.4(sass@1.71.1)
-      vitefu: 0.2.5(vite@5.1.4)
+      vite: 5.1.5(sass@1.71.1)
+      vitefu: 0.2.5(vite@5.1.5)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -2538,8 +2528,8 @@ packages:
     engines: { node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7 }
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001591
-      electron-to-chromium: 1.4.690
+      caniuse-lite: 1.0.30001593
+      electron-to-chromium: 1.4.692
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: false
@@ -2603,10 +2593,10 @@ packages:
     engines: { node: '>=14.16' }
     dev: false
 
-  /caniuse-lite@1.0.30001591:
+  /caniuse-lite@1.0.30001593:
     resolution:
       {
-        integrity: sha512-PCzRMei/vXjJyL5mJtzNiUCKP59dm8Apqc3PH8gJkMnMXZGox93RbE76jHsmLwmIo6/3nsYIpJtx0O7u5PqFuQ==
+        integrity: sha512-UWM1zlo3cZfkpBysd7AS+z+v007q9G1+fLTUU42rQnY6t2axoogPW/xol6T7juU5EUoOhML4WgBIdG+9yYqAjQ==
       }
     dev: false
 
@@ -3232,10 +3222,10 @@ packages:
       }
     dev: false
 
-  /electron-to-chromium@1.4.690:
+  /electron-to-chromium@1.4.692:
     resolution:
       {
-        integrity: sha512-+2OAGjUx68xElQhydpcbqH50hE8Vs2K6TkAeLhICYfndb67CVH0UsZaijmRUE3rHlIxU1u0jxwhgVe6fK3YANA==
+        integrity: sha512-d5rZRka9n2Y3MkWRN74IoAsxR0HK3yaAt7T50e3iT9VZmCCQDT3geXUO5ZRMhDToa1pkCeQXuNo+0g+NfDOVPA==
       }
     dev: false
 
@@ -4390,7 +4380,6 @@ packages:
       {
         integrity: sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
       }
-    requiresBuild: true
 
   /is-arrayish@0.2.1:
     resolution:
@@ -4912,10 +4901,10 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /magic-string@0.30.7:
+  /magic-string@0.30.8:
     resolution:
       {
-        integrity: sha512-8vBuFF/I/+OSLRmdf2wwFCJCz+nSn0m6DPvGH1fS/KiQoSaR+sETbov0eIk9KhEKy8CYqIkIAnbohxT/4H0kuA==
+        integrity: sha512-ISQTe55T2ao7XtlAStud6qwYPZjE4GK1S/BeVPus4jrq6JuOnQ00YKQC581RWhR122W7msZV263KzVeLoqidyQ==
       }
     engines: { node: '>=12' }
     dependencies:
@@ -7846,10 +7835,10 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@5.1.4(sass@1.71.1):
+  /vite@5.1.5(sass@1.71.1):
     resolution:
       {
-        integrity: sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==
+        integrity: sha512-BdN1xh0Of/oQafhU+FvopafUp6WaYenLU/NFoL5WyJL++GxkNfieKzBhM24H3HVsPQrlAqB7iJYTHabzaRed5Q==
       }
     engines: { node: ^18.0.0 || >=20.0.0 }
     hasBin: true
@@ -7885,7 +7874,7 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vitefu@0.2.5(vite@5.1.4):
+  /vitefu@0.2.5(vite@5.1.5):
     resolution:
       {
         integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==
@@ -7896,7 +7885,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.1.4(sass@1.71.1)
+      vite: 5.1.5(sass@1.71.1)
     dev: false
 
   /volar-service-css@0.0.30(@volar/language-service@2.0.4):

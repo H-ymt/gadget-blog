@@ -26,7 +26,6 @@ const { items: articles } = await newtClient.getContents<Article>({
               width={527}
               height={330}
               class="blogList__image"
-              data-pagefind-meta="image[src],image_alt[alt]"
               loading="eager"
             />
             <h3 class="blogList__title">{article.title}</h3>
