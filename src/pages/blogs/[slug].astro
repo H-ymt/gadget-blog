@@ -25,7 +25,7 @@ const { article } = Astro.props
 
 <Layout title={`${article.title} - ${SITE_TITLE}`}>
   <Image
-    src={article.coverImage.src}
+    src={article.coverImage.src + '?format=webp&width=800&height=800&quality=100'}
     width={800}
     height={800}
     alt="cover image"
