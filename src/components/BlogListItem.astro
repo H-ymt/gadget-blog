@@ -19,7 +19,7 @@ const { items: articles } = await newtClient.getContents<Article>({
         <li class="blogList__item js-blogItem">
           <a href={`/blogs/${article.slug}`}>
             <Image
-              src={article.coverImage.src}
+              src={article.coverImage.src + '?format=webp'}
               alt="Blog thumbnail"
               width={338}
               height={253}
