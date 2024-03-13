@@ -27,6 +27,7 @@ const { items: articles } = await newtClient.getContents<Article>({
               height={330}
               class="blogList__image"
               loading="eager"
+              transition:name="img"
             />
             <h3 class="blogList__title">{article.title}</h3>
             <div>

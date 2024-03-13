@@ -4,6 +4,7 @@ import '../styles/global.scss'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import Circle from '../components/Circle.astro'
+import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
   title: string
@@ -23,6 +24,7 @@ const { title } = Astro.props
     <script src="/pagefind/pagefind-ui.js" defer is:inline></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions fallback="swap" />
   </head>
   <body>
     <Header />
@@ -31,13 +33,13 @@ const { title } = Astro.props
       <Circle />
     </main>
     <Footer />
+    <style lang="scss">
+      .main {
+        width: 100%;
+        max-width: 748px;
+        padding: 48px 24px 30px;
+        margin-inline: auto;
+      }
+    </style>
   </body>
 </html>
-<style lang="scss">
-  .main {
-    width: 100%;
-    max-width: 748px;
-    padding: 48px 24px 30px;
-    margin-inline: auto;
-  }
-</style>
